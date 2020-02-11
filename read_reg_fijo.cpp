@@ -16,12 +16,12 @@ void Person::writeFile(){
     int temp=0;
     cout<<"**********ingreso de personas!!**********\n\n";
 
-    char LastName;
-    char FirstName;
-    char Address;
-    char City;
-    char State;
-    char ZipCode;
+        char LastName[16];
+        char FirstName[16];
+        char Address[16];
+        char City[16];
+        char State[3];
+        char ZipCode[10];
 
 
     while(temp==0){
@@ -39,7 +39,7 @@ void Person::writeFile(){
         cin>>x.zipcode;
 
         personasOut<<x.fisrtname<<" "<<x.lastname<<" "<<x.address<<" "<<x.city<<" "<<x.state<<" "<<x.zipcode<<"\n";
-        
+
         cout<<"desea ingresar mas personas? 0.si | 1.no\n\n";
         cin>>temp;
 
@@ -57,17 +57,17 @@ void Person::readFile(){
         return;
     }
 
-        char LastName;
-        char FirstName;
-        char Address;
-        char City;
-        char State;
-        char ZipCode;
+        char LastName[16];
+        char FirstName[16];
+        char Address[16];
+        char City[16];
+        char State[3];
+        char ZipCode[10];
 
     cout<<"**********************Consulta de personas**********************\n\n";
     while(personIn>>FirstName>>LastName>>Address>>City>>State>>ZipCode){
 
-        cout<<FirstName<<"\t"<<LastName<<"\t"<<Address<<"\t"<<City<<"\t"<<State<<"\t"<<ZipCode<<"\n";
+        cout<<FirstName<<" "<<LastName<<" "<<Address<<" "<<City<<" "<<State<<" "<<ZipCode<<"\n";
 
     }
 
